@@ -1,4 +1,5 @@
 package org.iis.ajnebro;
+import java.lang.Math;
 
 /**
  * Represents a simple calculator that can perform basic arithmetic operations such as addition,
@@ -52,5 +53,19 @@ public class Calculator {
       throw new IllegalArgumentException("Cannot divide by zero");
     }
     return number1 / number2;
+  }
+
+  /**
+   * Calculates the square root of a number
+   * 
+   * @param number The number whose square root is calculated
+   * @return The square root of number
+   * @throws IllegalArgumentException if number is negative
+   */
+  public double squareRoot(double number) {
+    if (number < 0) {
+      throw new IllegalArgumentException("Cannot calculate the square root of a negative number");
+    }
+    return Math.sqrt(number);
   }
 }
